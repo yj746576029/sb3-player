@@ -467,7 +467,7 @@ body,
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: white;
   font-size: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow: hidden;
@@ -754,7 +754,11 @@ body,
 }
 #wrapper { width: 100vw; height: 75vw; }
 @media (min-aspect-ratio: 480/360) {
-  #wrapper { height: 100vh; width: 133.33333333333331vh; }
+  #wrapper {
+    height: 100vh;
+    width: 133.33333333333331vh;
+    padding-left: calc((100vw - 133.33333333333331vh) / 2);
+  }
 }
 #loading-progress {
   border: 1px solid #67C23A;
