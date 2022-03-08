@@ -1,6 +1,10 @@
 # sb3-player
-- 你只需把你的sb3文件命名为demo.sb3,替换根目录下的resources\app\demo.sb3即可
-- 如果你下载的是发行版zip文件，首先解压zip文件，然后把你的sb3文件命名为demo.sb3,替换根目录下的resources\app\demo.sb3，然后双击运行sb3-player.exe即可
+
+## 下载发行版（推荐）
+如果你下载的是发行版zip文件，首先解压zip文件，然后把你的sb3文件命名为demo.sb3,替换根目录下的resources\app\demo.sb3，然后双击运行sb3-player.exe即可
+
+## 自己打包
+你只需把你的sb3文件命名为demo.sb3,替换根目录下的resources\app\demo.sb3，然后运行npm命令进行打包，然后根目录会生成dist_electron文件夹，其中：win-ia32-unpacked是32位免安装版，win-unpacked是64位免安装版，sb3-player Setup 0.1.0.exe是32+64位安装包，
 
 ```bash
 # 安装
