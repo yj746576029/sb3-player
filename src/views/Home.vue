@@ -467,7 +467,7 @@ body,
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: black;
   font-size: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow: hidden;
