@@ -7,10 +7,10 @@
         <label id="question" for="answer">问题</label>
         <input type="text" id="answer" />
       </div>
-    </div>
-    <div class="buttons">
-      <div id="start-btn" style="width: 24px;height: 24px;cursor: pointer;margin: 5px;" @click="start">开始</div>
-      <div id="stop-btn" style="width: 24px;height: 24px;cursor: pointer;margin: 5px;" @click="stop">结束</div>
+      <div class="buttons">
+        <div id="start-btn" style="width: 24px;height: 24px;cursor: pointer;margin: 5px;" @click="start">开始</div>
+        <div id="stop-btn" style="width: 24px;height: 24px;cursor: pointer;margin: 5px;" @click="stop">结束</div>
+      </div>
     </div>
     <div v-if="loading" class="loading">
       <img src="@/assets/image/loading.gif"/>
@@ -47,7 +47,7 @@ export default {
     }
   },
   mounted() {
-    let scratchUrl = "/demo.sb3";
+    let scratchUrl = "/scratch.sb3";
     axios.request({
       url: scratchUrl,
       method: 'get',
@@ -543,7 +543,7 @@ body,
   height: 100%;
 }
 .buttons {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
@@ -752,12 +752,13 @@ body,
   z-index: 1000;
   display: none;
 }
-#wrapper { width: 100vw; height: 75vw; }
+#wrapper { position: relative;width: 100vw; height: 75vw; }
 @media (min-aspect-ratio: 480/360) {
   #wrapper {
+    position: relative;
     height: 100vh;
     width: 133.33333333333331vh;
-    padding-left: calc((100vw - 133.33333333333331vh) / 2);
+    left: calc((100vw - 133.33333333333331vh) / 2);
   }
 }
 #loading-progress {
